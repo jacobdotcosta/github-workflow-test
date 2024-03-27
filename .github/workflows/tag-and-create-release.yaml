@@ -41,7 +41,7 @@ jobs:
         with:
           configurationJson: |
             {
-              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>💬 Other Changes</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
               "categories": [
                 {
                     "title": "## 🎉 Exciting New Features",
@@ -49,11 +49,7 @@ jobs:
                 },
                 {
                     "title": "## 🐞 Bug Fixes",
-                    "labels": ["enhancement"]
-                },
-                {
-                    "title": "## 💬 Other Changes",
-                    "labels": ["*"]
+                    "labels": ["bug"]
                 },
                 {
                     "title": "## 📦 Dependencies",

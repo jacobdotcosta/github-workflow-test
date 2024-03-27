@@ -44,17 +44,24 @@ jobs:
               "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
               "categories": [
                 {
+                    "title": "## 🎉 Exciting New Features",
+                    "labels": ["enhancement"]
+                },
+                {
+                    "title": "## 🐞 Bug Fixes",
+                    "labels": ["enhancement"]
+                },
+                {
                     "title": "## 💬 Other Changes",
                     "labels": ["*"]
                 },
                 {
                     "title": "## 📦 Dependencies",
                     "labels": ["dependencies"]
-                },
-                {
-                    "title": "## 🎉 Exciting New Features ",
-                    "labels": ["enhancement"]
                 }
+              ],
+              "ignore_labels": [
+                "release"
               ]
             }
         env:

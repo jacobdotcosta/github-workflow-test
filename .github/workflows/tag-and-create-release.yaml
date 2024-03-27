@@ -35,6 +35,31 @@ jobs:
           git tag -a "$release_version" -m "Version $release_version"
           git push --follow-tags
 
+      - name: Build Changelog
+        uses: mikepenz/release-changelog-builder-action@v4
+        id: generate_changelog
+        with:
+          configurationJson: |
+            {
+              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+              "categories": [
+                {
+                    "title": "## 💬 Other Changes",
+                    "labels": ["*"]
+                },
+                {
+                    "title": "## 📦 Dependencies",
+                    "labels": ["dependencies"]
+                },
+                {
+                    "title": "## 🎉 Exciting New Features ",
+                    "labels": ["enhancement"]
+                }
+              ]
+            }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create release
         id: create_release
         uses: actions/create-release@v1
@@ -45,5 +70,7 @@ jobs:
           release_name: Release ${{ steps.get_version_number.outputs.version }}
           body: |
             Release ${{ steps.get_version_number.outputs.version }}
+
+            ${{steps.generate_changelog.outputs.changelog}}
           draft: false
           prerelease: false

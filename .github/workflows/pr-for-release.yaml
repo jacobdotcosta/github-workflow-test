@@ -54,8 +54,10 @@ jobs:
             find plugins/ -maxdepth 2 -name package.json
             find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'\n' \;
             PLUGIN_FILES=$(find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'\n' \;)
-            echo "plugin_files=$PLUGIN_FILES" >> $GITHUB_OUTPUT
-
+            #echo "plugin_files=$PLUGIN_FILES" >> $GITHUB_OUTPUT
+            echo "PLUGIN_FILES_MD<<EOF" >> $GITHUB_ENV
+            echo "$PLUGIN_FILES" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
 
         - name: Create pull request for release
           id: create_pr
@@ -69,7 +71,7 @@ jobs:
 
               This pull request contains the plugin `package.json` files updated with the new release version
 
-              ${{ steps.list_package_json_files.outputs.plugin_files }}
+              ${{ env.PLUGIN_FILES_MD }}
 
                 * `plugins/quarkus/package.json`
                 * `plugins/quarkus-backend/package.json`

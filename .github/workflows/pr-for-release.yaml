@@ -53,7 +53,7 @@ jobs:
           run: |
             find plugins/ -maxdepth 2 -name package.json
             find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'\n' \;
-            PLUGIN_FILES=$(find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'' \;)
+            PLUGIN_FILES=$(find plugins/ -maxdepth 2 -name package.json -exec echo '  - `'{}'`' \;)
             #echo "plugin_files=$PLUGIN_FILES" >> $GITHUB_OUTPUT
             echo "PLUGIN_FILES_MD<<EOF" >> $GITHUB_ENV
             echo "$PLUGIN_FILES" >> $GITHUB_ENV

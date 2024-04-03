@@ -63,7 +63,7 @@ jobs:
         - name: List package URL
           id: list_package_url
           run: |
-            PACKAGE_URL=$(find plugins/ -maxdepth 2 -name package.json -exec sh -c "echo -n https://www.npmjs.com/package/ ; cat {} | jq -j '.name' ; echo -n /v/ ; cat {} | jq -j '.version'" \;)
+            PACKAGE_URL=$(find plugins/ -maxdepth 2 -name package.json -exec sh -c "echo -n https://www.npmjs.com/package/ ; cat {} | jq -j '.name' ; echo -n /v/ ; cat {} | jq -j '.version' ; printf '\n'" \;)
             echo "PACKAGE_URL_MD<<EOF" >> $GITHUB_ENV
             echo "$PACKAGE_URL" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV

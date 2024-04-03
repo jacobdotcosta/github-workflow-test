@@ -48,6 +48,13 @@ jobs:
             yarn version --${{ github.event.inputs.version_type }} --no-git-tag-version 
             echo "version=$(cat package.json  | jq .version -r)" >> $GITHUB_OUTPUT
 
+        - name: List package.json files
+          id: list_package_json_files
+          run: |
+            find plugins/ -maxdepth 2 -name package.json
+            echo "plugin_files=$(find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'\n' \;) >> $GITHUB_OUTPUT
+
+
         - name: Create pull request for release
           id: create_pr
           uses: peter-evans/create-pull-request@v6
@@ -59,6 +66,8 @@ jobs:
               Pull request for release ${{ steps.calculate_next_version.outputs.version }}.
 
               This pull request contains the plugin `package.json` files updated with the new release version
+
+              ${{ steps.list_package_json_files.outputs.plugin_files }}
 
                 * `plugins/quarkus/package.json`
                 * `plugins/quarkus-backend/package.json`

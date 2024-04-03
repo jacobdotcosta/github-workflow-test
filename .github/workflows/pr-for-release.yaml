@@ -52,7 +52,9 @@ jobs:
           id: list_package_json_files
           run: |
             find plugins/ -maxdepth 2 -name package.json
-            echo "plugin_files=$(find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'\n' \;)" >> $GITHUB_OUTPUT
+            find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'\n' \;
+            PLUGIN_FILES=$(find plugins/ -maxdepth 2 -name package.json -exec echo '  - '{}'\n' \;)
+            echo "plugin_files=$PLUGIN_FILES" >> $GITHUB_OUTPUT
 
 
         - name: Create pull request for release

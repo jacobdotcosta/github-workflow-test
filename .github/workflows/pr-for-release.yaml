@@ -59,6 +59,16 @@ jobs:
             echo "$PLUGIN_FILES" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
 
+
+        - name: List package URL
+          id: list_package_url
+          run: |
+            PACKAGE_URL=$(find plugins/ -maxdepth 2 -name package.json -exec sh -c "echo -n https://www.npmjs.com/package/ ; cat {} | jq -j '.name' ; echo -n /v/ ; cat {} | jq -j '.version'" \;)
+            echo "PACKAGE_URL_MD<<EOF" >> $GITHUB_ENV
+            echo "$PACKAGE_URL" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+
+
         - name: Create pull request for release
           id: create_pr
           uses: peter-evans/create-pull-request@v6
@@ -70,6 +80,8 @@ jobs:
               Pull request for release ${{ steps.calculate_next_version.outputs.version }}.
 
               This pull request contains the plugin `package.json` files updated with the new release version
+              
+              ${{ env.PACKAGE_URL_MD }}
 
               ${{ env.PLUGIN_FILES_MD }}
 

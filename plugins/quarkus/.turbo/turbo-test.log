@@ -1,0 +1,306 @@
+$ backstage-cli package test --passWithNoTests --coverage
+  console.error
+    Warning: An update to Progress inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at Progress (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/node_modules/@backstage/core-components/dist/index.esm.js:2409:25)
+        at onChange (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.tsx:62:9)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:732:43)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.test.tsx:31:22)
+        at basenameProp (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1163:17)
+        at basename (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1058:7)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:555:18)
+        at AppRouter (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2336:78)
+        at Suspense
+        at routePaths (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2892:3)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/ThemeProvider/ThemeProvider.js:48:24)
+        at StylesProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/StylesProvider/StylesProvider.js:57:24)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/private-theming/node/ThemeProvider/ThemeProvider.js:39:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/system/ThemeProvider/ThemeProvider.js:50:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/material/node/styles/ThemeProvider.js:21:14)
+        at StyledEngineProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/styled-engine/node/StyledEngineProvider/StyledEngineProvider.js:27:5)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/theme/dist/index.esm.js:649:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:565:22)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3091:29)
+        at appContext (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2963:3)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3793:25)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:594:29)
+
+      at printWarning (../../../node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../../node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../../../node_modules/react-dom/cjs/react-dom.development.js:27589:9)
+      at scheduleUpdateOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:25508:5)
+      at dispatchSetState (../../../node_modules/react-dom/cjs/react-dom.development.js:17527:7)
+      at setIsVisible (../node_modules/@backstage/core-components/dist/index.esm.js:2413:13)
+      at Timeout.task [as _onTimeout] (../../../node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+
+  console.log
+    Recommended version: io.quarkus.platform:3.8
+
+      at log (scaffolder/QuarkusVersionList.tsx:76:17)
+
+  console.error
+    Warning: An update to QuarkusVersionList inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at onChange (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.tsx:62:9)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:732:43)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.test.tsx:31:22)
+        at basenameProp (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1163:17)
+        at basename (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1058:7)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:555:18)
+        at AppRouter (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2336:78)
+        at Suspense
+        at routePaths (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2892:3)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/ThemeProvider/ThemeProvider.js:48:24)
+        at StylesProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/StylesProvider/StylesProvider.js:57:24)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/private-theming/node/ThemeProvider/ThemeProvider.js:39:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/system/ThemeProvider/ThemeProvider.js:50:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/material/node/styles/ThemeProvider.js:21:14)
+        at StyledEngineProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/styled-engine/node/StyledEngineProvider/StyledEngineProvider.js:27:5)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/theme/dist/index.esm.js:649:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:565:22)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3091:29)
+        at appContext (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2963:3)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3793:25)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:594:29)
+
+      at printWarning (../../../node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../../node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../../../node_modules/react-dom/cjs/react-dom.development.js:27589:9)
+      at scheduleUpdateOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:25508:5)
+      at dispatchSetState (../../../node_modules/react-dom/cjs/react-dom.development.js:17527:7)
+      at ../../../node_modules/react-use/lib/useAsyncFn.js:22:61
+
+  console.error
+    Warning: An update to ForwardRef(FormControl) inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at FormControl (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/core/FormControl/FormControl.js:90:24)
+        at WithStyles (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/withStyles/withStyles.js:67:31)
+        at div
+        at StyledComponent (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/styled/styled.js:95:28)
+        at multiple (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/node_modules/@backstage/core-components/dist/index.esm.js:2921:5)
+        at div
+        at FormControl (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/core/FormControl/FormControl.js:90:24)
+        at WithStyles (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/withStyles/withStyles.js:67:31)
+        at onChange (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.tsx:62:9)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:732:43)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.test.tsx:31:22)
+        at basenameProp (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1163:17)
+        at basename (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1058:7)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:555:18)
+        at AppRouter (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2336:78)
+        at Suspense
+        at routePaths (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2892:3)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/ThemeProvider/ThemeProvider.js:48:24)
+        at StylesProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/StylesProvider/StylesProvider.js:57:24)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/private-theming/node/ThemeProvider/ThemeProvider.js:39:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/system/ThemeProvider/ThemeProvider.js:50:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/material/node/styles/ThemeProvider.js:21:14)
+        at StyledEngineProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/styled-engine/node/StyledEngineProvider/StyledEngineProvider.js:27:5)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/theme/dist/index.esm.js:649:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:565:22)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3091:29)
+        at appContext (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2963:3)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3793:25)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:594:29)
+
+      at printWarning (../../../node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../../node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../../../node_modules/react-dom/cjs/react-dom.development.js:27589:9)
+      at scheduleUpdateOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:25508:5)
+      at dispatchSetState (../../../node_modules/react-dom/cjs/react-dom.development.js:17527:7)
+      at ../../../node_modules/@material-ui/core/FormControl/FormControl.js:190:5
+      at ../../../node_modules/@material-ui/core/InputBase/InputBase.js:316:9
+      at ../../../node_modules/@material-ui/core/InputBase/InputBase.js:399:5
+      at commitHookEffectListMount (../../../node_modules/react-dom/cjs/react-dom.development.js:23150:26)
+      at commitPassiveMountOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:24931:11)
+      at commitPassiveMountEffects_complete (../../../node_modules/react-dom/cjs/react-dom.development.js:24891:9)
+      at commitPassiveMountEffects_begin (../../../node_modules/react-dom/cjs/react-dom.development.js:24878:7)
+      at commitPassiveMountEffects (../../../node_modules/react-dom/cjs/react-dom.development.js:24866:3)
+      at flushPassiveEffectsImpl (../../../node_modules/react-dom/cjs/react-dom.development.js:27039:3)
+      at flushPassiveEffects (../../../node_modules/react-dom/cjs/react-dom.development.js:26984:14)
+      at ../../../node_modules/react-dom/cjs/react-dom.development.js:26769:9
+      at workLoop (../../../node_modules/scheduler/cjs/scheduler.development.js:266:34)
+      at flushWork (../../../node_modules/scheduler/cjs/scheduler.development.js:239:14)
+      at performWorkUntilDeadline (../../../node_modules/scheduler/cjs/scheduler.development.js:533:21)
+      at Timeout.task [as _onTimeout] (../../../node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+
+  console.error
+    Warning: An update to ForwardRef(FormControl) inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at FormControl (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/core/FormControl/FormControl.js:90:24)
+        at WithStyles (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/withStyles/withStyles.js:67:31)
+        at div
+        at StyledComponent (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/styled/styled.js:95:28)
+        at multiple (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/node_modules/@backstage/core-components/dist/index.esm.js:2921:5)
+        at div
+        at FormControl (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/core/FormControl/FormControl.js:90:24)
+        at WithStyles (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/withStyles/withStyles.js:67:31)
+        at onChange (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.tsx:62:9)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:732:43)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.test.tsx:31:22)
+        at basenameProp (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1163:17)
+        at basename (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1058:7)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:555:18)
+        at AppRouter (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2336:78)
+        at Suspense
+        at routePaths (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2892:3)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/ThemeProvider/ThemeProvider.js:48:24)
+        at StylesProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/StylesProvider/StylesProvider.js:57:24)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/private-theming/node/ThemeProvider/ThemeProvider.js:39:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/system/ThemeProvider/ThemeProvider.js:50:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/material/node/styles/ThemeProvider.js:21:14)
+        at StyledEngineProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/styled-engine/node/StyledEngineProvider/StyledEngineProvider.js:27:5)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/theme/dist/index.esm.js:649:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:565:22)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3091:29)
+        at appContext (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2963:3)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3793:25)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:594:29)
+
+      at printWarning (../../../node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../../node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../../../node_modules/react-dom/cjs/react-dom.development.js:27589:9)
+      at scheduleUpdateOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:25508:5)
+      at dispatchSetState (../../../node_modules/react-dom/cjs/react-dom.development.js:17527:7)
+      at ../../../node_modules/@material-ui/core/InputBase/InputBase.js:452:22
+      at commitHookEffectListMount (../../../node_modules/react-dom/cjs/react-dom.development.js:23150:26)
+      at commitPassiveMountOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:24931:11)
+      at commitPassiveMountEffects_complete (../../../node_modules/react-dom/cjs/react-dom.development.js:24891:9)
+      at commitPassiveMountEffects_begin (../../../node_modules/react-dom/cjs/react-dom.development.js:24878:7)
+      at commitPassiveMountEffects (../../../node_modules/react-dom/cjs/react-dom.development.js:24866:3)
+      at flushPassiveEffectsImpl (../../../node_modules/react-dom/cjs/react-dom.development.js:27039:3)
+      at flushPassiveEffects (../../../node_modules/react-dom/cjs/react-dom.development.js:26984:14)
+      at ../../../node_modules/react-dom/cjs/react-dom.development.js:26769:9
+      at workLoop (../../../node_modules/scheduler/cjs/scheduler.development.js:266:34)
+      at flushWork (../../../node_modules/scheduler/cjs/scheduler.development.js:239:14)
+      at performWorkUntilDeadline (../../../node_modules/scheduler/cjs/scheduler.development.js:533:21)
+      at Timeout.task [as _onTimeout] (../../../node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+
+  console.error
+    Warning: An update to ForwardRef(FormControl) inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+        at FormControl (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/core/FormControl/FormControl.js:90:24)
+        at WithStyles (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/withStyles/withStyles.js:67:31)
+        at div
+        at StyledComponent (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/styled/styled.js:95:28)
+        at multiple (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/node_modules/@backstage/core-components/dist/index.esm.js:2921:5)
+        at div
+        at FormControl (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/core/FormControl/FormControl.js:90:24)
+        at WithStyles (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/withStyles/withStyles.js:67:31)
+        at onChange (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.tsx:62:9)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:732:43)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/plugins/quarkus/src/scaffolder/QuarkusVersionList.test.tsx:31:22)
+        at basenameProp (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1163:17)
+        at basename (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/react-router/dist/umd/react-router.development.js:1058:7)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:555:18)
+        at AppRouter (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2336:78)
+        at Suspense
+        at routePaths (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2892:3)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/ThemeProvider/ThemeProvider.js:48:24)
+        at StylesProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@material-ui/styles/StylesProvider/StylesProvider.js:57:24)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/private-theming/node/ThemeProvider/ThemeProvider.js:39:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/system/ThemeProvider/ThemeProvider.js:50:5)
+        at ThemeProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/material/node/styles/ThemeProvider.js:21:14)
+        at StyledEngineProvider (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@mui/styled-engine/node/StyledEngineProvider/StyledEngineProvider.js:27:5)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/theme/dist/index.esm.js:649:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:565:22)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3091:29)
+        at appContext (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:2963:3)
+        at apis (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:41:11)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/core-app-api/dist/index.esm.js:3793:25)
+        at children (/z/dev/client/redhat/forks-github/backstage-plugins/node_modules/@backstage/test-utils/dist/index.esm.js:594:29)
+
+      at printWarning (../../../node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (../../../node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at warnIfUpdatesNotWrappedWithActDEV (../../../node_modules/react-dom/cjs/react-dom.development.js:27589:9)
+      at scheduleUpdateOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:25508:5)
+      at dispatchSetState (../../../node_modules/react-dom/cjs/react-dom.development.js:17527:7)
+      at ../../../node_modules/@material-ui/core/InputBase/InputBase.js:452:22
+      at commitHookEffectListMount (../../../node_modules/react-dom/cjs/react-dom.development.js:23150:26)
+      at commitPassiveMountOnFiber (../../../node_modules/react-dom/cjs/react-dom.development.js:24931:11)
+      at commitPassiveMountEffects_complete (../../../node_modules/react-dom/cjs/react-dom.development.js:24891:9)
+      at commitPassiveMountEffects_begin (../../../node_modules/react-dom/cjs/react-dom.development.js:24878:7)
+      at commitPassiveMountEffects (../../../node_modules/react-dom/cjs/react-dom.development.js:24866:3)
+      at flushPassiveEffectsImpl (../../../node_modules/react-dom/cjs/react-dom.development.js:27039:3)
+      at flushPassiveEffects (../../../node_modules/react-dom/cjs/react-dom.development.js:26984:14)
+      at performSyncWorkOnRoot (../../../node_modules/react-dom/cjs/react-dom.development.js:26076:3)
+      at flushSyncCallbacks (../../../node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+      at commitRootImpl (../../../node_modules/react-dom/cjs/react-dom.development.js:26959:3)
+      at commitRoot (../../../node_modules/react-dom/cjs/react-dom.development.js:26682:5)
+      at finishConcurrentRender (../../../node_modules/react-dom/cjs/react-dom.development.js:25981:9)
+      at performConcurrentWorkOnRoot (../../../node_modules/react-dom/cjs/react-dom.development.js:25809:7)
+      at workLoop (../../../node_modules/scheduler/cjs/scheduler.development.js:266:34)
+      at flushWork (../../../node_modules/scheduler/cjs/scheduler.development.js:239:14)
+      at performWorkUntilDeadline (../../../node_modules/scheduler/cjs/scheduler.development.js:533:21)
+      at Timeout.task [as _onTimeout] (../../../node_modules/jsdom/lib/jsdom/browser/Window.js:520:19)
+
+PASS src/scaffolder/QuarkusVersionList.test.tsx (9.063 s)
+  <QuarkusVersionList />
+    without changes
+      ✓ should get the default value including (RECOMMENDED) (2218 ms)
+
+------------------------------|---------|----------|---------|---------|-------------------
+File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------------|---------|----------|---------|---------|-------------------
+All files                     |   32.98 |    17.39 |   16.21 |   35.63 |                   
+ src                          |       0 |      100 |     100 |       0 |                   
+  plugin.ts                   |       0 |      100 |     100 |       0 | 7-17              
+ src/scaffolder               |   34.04 |    17.39 |   16.21 |    36.9 |                   
+  QuarkusExtensionList.tsx    |       0 |        0 |       0 |       0 | 10-253            
+  QuarkusQuickstartPicker.tsx |       0 |        0 |       0 |       0 | 9-118             
+  QuarkusVersionList.tsx      |   94.11 |    70.58 |   85.71 |   96.87 | 99                
+------------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        11.075 s
+Ran all test suites.

@@ -2,8 +2,8 @@ name: Update the documentation
 
 on:
   pull_request:
-    types:
-      - closed
+    # types:
+    #   - closed
 
 permissions:
   contents: write

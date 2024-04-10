@@ -30,16 +30,31 @@ jobs:
           done
 
       - name: Check if contains README.md
+        id: pr_contains_readme
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          echo ${ALL_CHANGED_FILES} | grep README.md
+          echo ${ALL_CHANGED_FILES} | grep -c README.md
+          echo "grep_result=$(echo ${ALL_CHANGED_FILES} | grep -c README.md)" >> $GITHUB_OUTPUT
 
-      - name: Check if contains GARBAGE
+      - name: Generate main README.md from template
+        if: steps.pr_contains_readme.outputs.grep_result > 0
+        run: |
+          echo "Generate README.md from template"
+          m4 README.m4.template.md > README.md
+
+      - name: Don't generate main README.md
+        if: steps.pr_contains_readme.outputs.grep_result == 0
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          echo ${ALL_CHANGED_FILES} | grep GARBAGE
+          echo "Don't generate README.md"
+
+      # - name: Check if contains GARBAGE
+      #   env:
+      #     ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+      #   run: |
+      #     echo ${ALL_CHANGED_FILES} | grep GARBAGE
 
       # - name: Check PR
       #   uses: JJ/github-pr-contains-action@releases/v4

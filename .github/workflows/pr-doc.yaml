@@ -20,7 +20,7 @@ jobs:
       - name: Check PR
         uses: JJ/github-pr-contains-action@releases/v0
         with:
-          github-token: ${{github.token}}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           diffContains: 'README.md'
 
       # - name: Get changes

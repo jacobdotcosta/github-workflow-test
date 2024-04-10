@@ -29,7 +29,17 @@ jobs:
             echo "$file was changed"
           done
 
-          echo $list | grep README.md
+      - name: Check if contains README.md
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          echo ${ALL_CHANGED_FILES} | grep README.md
+
+      - name: Check if contains GARBAGE
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          echo ${ALL_CHANGED_FILES} | grep GARBAGE
 
       # - name: Check PR
       #   uses: JJ/github-pr-contains-action@releases/v4

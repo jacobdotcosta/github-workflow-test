@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Check PR
-        uses: JJ/github-pr-contains-action@releases/v0
+        uses: JJ/github-pr-contains-action@releases/v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           diffContains: 'README.md'

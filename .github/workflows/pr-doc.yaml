@@ -29,6 +29,8 @@ jobs:
             echo "$file was changed"
           done
 
+          echo $list | grep README.md
+
       # - name: Check PR
       #   uses: JJ/github-pr-contains-action@releases/v4
       #   with:

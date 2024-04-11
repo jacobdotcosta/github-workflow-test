@@ -130,4 +130,3 @@ Quarkus Quickstart Picker - default (field):
 
 Quarkus Quickstart Picker - select (field):
 ![quickstart-2.png](plugins/quarkus/doc/quickstart-2.png)
-

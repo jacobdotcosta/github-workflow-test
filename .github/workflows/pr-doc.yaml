@@ -2,6 +2,8 @@ name: Update the documentation
 
 on:
   pull_request:
+    types:
+      - closed
     branches:
       - main
 
@@ -11,16 +13,12 @@ permissions:
   
 jobs:
   generateDocs:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Setup Git
-        run: |
-            git config user.name "${{ github.actor }}"
-            git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
 
       - name: Get changed files
         id: changed-files
@@ -46,6 +44,8 @@ jobs:
         if: steps.pr_contains_readme.outputs.grep_result > 0
         run: |
           echo "Generate README.md from template"
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
           m4 README.m4.template.md > README.md
           git add README.md
           git commit -m "Generated main README.md file from template"

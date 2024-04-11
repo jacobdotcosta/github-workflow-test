@@ -131,3 +131,4 @@ Example of action:
           additionalProperties: ${{ parameters.additionalProperties }}
           starterCode: true
 ```
+

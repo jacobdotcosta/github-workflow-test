@@ -1,4 +1,4 @@
-name: Update the documentation
+name: Regenerate docs and create PR
 
 on:
   workflow_dispatch:
